@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class Movie extends StatefulWidget {
@@ -178,14 +180,14 @@ class _MovieState extends State<Movie> {
                       const SizedBox(
                         width: 20,
                       ),
-                      Container(
-                        height: 200,
-                        width: 200,
-                        color: Colors.black,
-                        child: Image.network(
+                      
+                        Image.network(
                           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ5Cq8kozpWIaq5Aohw4rjKkh_eE7nUkDV5zcHClQaYw&s",
+                          width: 900,
+                          
                         ),
-                      ),
+                      
+                      
                       const SizedBox(
                         width: 20,
                       ),
