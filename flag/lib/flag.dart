@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 //import 'assignment1.dart';
 void main() {
+int ? x = 10;
   runApp(const Assign11());
 }
 class Assign11 extends StatelessWidget {
