@@ -262,7 +262,7 @@ class _Assignment4State extends State<Assignment4> {
                       Icons.send,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 200,
                   ),
                   IconButton(
@@ -315,7 +315,7 @@ class _Assignment4State extends State<Assignment4> {
                       Icons.send,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 200,
                   ),
                   IconButton(

@@ -29,29 +29,30 @@ class _QuizAppState extends State<QuizApp> {
 
   List questionList = [
     const QuestionModel(
-        question: " Who is Founder of Microsoft ?",
-        options: ["Larray Page ", "steve Jobs", "bill gates", "Jeff bezoz"],
-        answer: 2),
-    const QuestionModel(
-      question: "Who is Founder of Apple ?",
-      options: ["Elon musk", "Bill Gates", "Mark Z", "Steve Jobs"],
-      answer: 3,
-    ),
-    const QuestionModel(
-      question: "Who is Founder of tesla ? ",
-      options: ["Narayan Murti", "Steve Jobs", "Elon musk", "Aditya Andhale"],
-      answer: 2,
-    ),
-    const QuestionModel(
-      question: "Who is Founder of Meta  ?",
-      options: ["Mark Z", "Elon Musk", "Bill gates", "Larray page"],
-      answer: 0,
-    ),
-    const QuestionModel(
-      question: "Who is Founder of Google ?",
-      options: ["Elon Musk", "Steve Jobs", "Larry Page", "Bill gates"],
-      answer: 2,
-    )
+    question: "Who is the founder of C ?",
+    options: ["Dennis Ritchie", "Linus Torvalds", "Bjarne Stroustrup", "Bill Gates"],
+    answer: 0,
+  ),
+  const QuestionModel(
+    question: "Who is the founder of C++ ?",
+    options: ["James Gosling", "Linus Torvalds", "Bjarne Stroustrup", "Bill Gates"],
+    answer: 2,
+  ),
+  const QuestionModel(
+    question: "Who is the founder of Java ?",
+    options: ["Dennis Ritchie", "James Gosling", "Guido van Rossum", "Bill Gates"],
+    answer: 1,
+  ),
+  const QuestionModel(
+    question: "Who is the founder of Python ?",
+    options: ["Dennis Ritchie", "Guido van Rossum", "Linus Torvalds", "James Gosling"],
+    answer: 1,
+  ),
+  const QuestionModel(
+    question: "Who is the founder of Dart ?",
+    options: ["Dennis Ritchie", "Lars Bak", "Bjarne Stroustrup", "James Gosling"],
+    answer: 1,
+  ),
   ];
 
   // method to check Valid Index
@@ -140,13 +141,13 @@ class _QuizAppState extends State<QuizApp> {
                               ),
               
               child: SizedBox(
-                width: 370,
+                width: 360,
                 height: 450,
                 child: Column(
                   children: [
                     Container(
                       height: 100,
-                      width: 370,
+                      width: 360,
                       decoration: const BoxDecoration(
                           color: Color(0xFF00ADB5),
                           borderRadius: BorderRadius.only(
@@ -180,7 +181,7 @@ class _QuizAppState extends State<QuizApp> {
                         },
                         style: ButtonStyle(
                           foregroundColor:
-                             MaterialStateProperty.all(Color.fromARGB(255, 0, 0, 0)),
+                             MaterialStateProperty.all(const Color.fromARGB(255, 0, 0, 0)),
                           backgroundColor: checkAnswer(0),
                         ),
                         child: Text(
@@ -204,7 +205,7 @@ class _QuizAppState extends State<QuizApp> {
                         },
                         style: ButtonStyle(
                           foregroundColor:
-                              MaterialStateProperty.all(Color.fromARGB(255, 0, 0, 0)),
+                              MaterialStateProperty.all(const Color.fromARGB(255, 0, 0, 0)),
                           backgroundColor: checkAnswer(1),
                         ),
                         child: Text(
@@ -229,7 +230,7 @@ class _QuizAppState extends State<QuizApp> {
                         },
                         style: ButtonStyle(
                           foregroundColor:
-                             MaterialStateProperty.all(Color.fromARGB(255, 0, 0, 0)),
+                             MaterialStateProperty.all(const Color.fromARGB(255, 0, 0, 0)),
                           backgroundColor: checkAnswer(2),
                         ),
                         child: Text(
@@ -254,7 +255,7 @@ class _QuizAppState extends State<QuizApp> {
                         },
                         style: ButtonStyle(
                           foregroundColor:
-                              MaterialStateProperty.all(Color.fromARGB(255, 0, 0, 0)),
+                              MaterialStateProperty.all(const Color.fromARGB(255, 0, 0, 0)),
                           backgroundColor: checkAnswer(3),
                         ),
                         child: Text(
@@ -296,7 +297,7 @@ class _QuizAppState extends State<QuizApp> {
         body: Column(
           children: [
             const SizedBox(
-              height: 30,
+              height: 20,
             ),
             Center(
               child: Image.asset(
@@ -306,7 +307,7 @@ class _QuizAppState extends State<QuizApp> {
               ),
             ),
             const SizedBox(
-              height: 30,
+              height: 20,
             ),
             const Text(
               "Congratulations !",
@@ -330,14 +331,14 @@ class _QuizAppState extends State<QuizApp> {
             ),
             const SizedBox(height: 15),
             Text(
-              "Correct Answers : ${noOfCorrectAnswers}/${questionList.length}",
+              "Correct Answers : $noOfCorrectAnswers/${questionList.length}",
               style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w500,
               ),
             ),
             const SizedBox(
-              height: 30,
+              height: 20,
             ),
             Center(
               child: ElevatedButton(
