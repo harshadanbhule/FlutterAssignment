@@ -12,13 +12,22 @@ class _AssignState extends State<Assign> {
   var name = TextEditingController();
   var compannyDep = TextEditingController();
 
-  var data = "";
+  var compname = "";
+  var empname = "";
+  var compdep = "";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.green,
-        title: const Text("TextField"),
+        title: const Text("TextField",
+        style: TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.w800
+        ),
+        ),
       ),
       body: Center(
           child: Column(
@@ -80,35 +89,71 @@ class _AssignState extends State<Assign> {
           const SizedBox(
             height: 10,
           ),
-           ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  // Concatenate text from all three text fields
-                  data = 'Company Name: ${compannyName.text}\n'
-                      'Employee Name: ${name.text}\n'
-                      'Company Department: ${compannyDep.text}';
-                });
-              },
-              style: ElevatedButton.styleFrom(
-                foregroundColor:Colors.white,
-                backgroundColor: Colors.green,
-              ),
-              child: const Text("Print"),
+          ElevatedButton(
+            onPressed: () {
+              setState(() {
+                // Concatenate text from all three text fields
+                compname = 'Company Name: ${compannyName.text}';
+                empname = 'Employee Name: ${name.text}';
+                compdep = 'Company Department: ${compannyDep.text}';
+              });
+            },
+            style: ElevatedButton.styleFrom(
+              foregroundColor: Colors.white,
+              backgroundColor: Colors.green,
             ),
+            child: const Text("Print",
+            style: TextStyle(
+              fontSize: 20
+            ),
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-              height: 150,
-              width: 300,
+              height: 170,
+              width: 350,
               decoration: const BoxDecoration(
-                color: Colors.green,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(10)
-                )
-              ),
-        
+                  color: Colors.green,
+                  borderRadius: BorderRadius.all(Radius.circular(10))),
               padding: const EdgeInsets.all(8),
-              child: Text(data),
+              child: Center(
+                child: Column(
+                  children: [
+                    
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        compname,
+                        style: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        empname,
+                        style: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        compdep,
+                        style: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
           )
         ],
