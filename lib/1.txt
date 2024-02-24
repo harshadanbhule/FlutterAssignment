@@ -31,7 +31,7 @@ child: Center(
                             fontWeight: FontWeight.w500,
                             color: Colors.white),
                       ),
-                    ),
+                    ),//add
                   ],
                 ),
               ),
