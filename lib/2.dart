@@ -12,7 +12,7 @@ class _AssignState extends State<Assign> {
   var name = TextEditingController();
   var companyDep = TextEditingController();
 
-  List<String> employeeInfos = [];
+  List<String> employeeInfos = [ ];
 
   @override
   Widget build(BuildContext context) {
